@@ -55,7 +55,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Sign In" id="Wls-uk-FRK"/>
+                    <navigationItem key="navigationItem" title="Sign In" id="Wls-uk-FRK">
+                        <barButtonItem key="backBarButtonItem" title="Hello" id="IPG-AU-GNk"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="swRememberMe" destination="lRm-AZ-kCU" id="S2D-83-20R"/>
                         <outlet property="txtUserEmail" destination="KRH-Wu-gfD" id="XYj-5L-SJ0"/>
@@ -64,7 +66,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1220" y="133.5832083958021"/>
+            <point key="canvasLocation" x="1038" y="204"/>
         </scene>
         <!--Home-->
         <scene sceneID="ElK-rs-GEP">
@@ -86,7 +88,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="About Us"/>
                                 <connections>
-                                    <segue destination="Ll5-cS-3Ah" kind="show" id="gSD-VU-OzL"/>
+                                    <action selector="btnNextClick:" destination="Tek-YD-0PX" eventType="touchUpInside" id="Oty-ka-g9L"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,11 +97,13 @@
                     </view>
                     <connections>
                         <outlet property="lblUserEmail" destination="2TI-Rv-ymX" id="Kv8-R8-Dx2"/>
+                        <segue destination="Ll5-cS-3Ah" kind="show" identifier="moveToAboutUsSegue" id="Zgi-4d-v7u"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="moveToLoginSegue" id="8v4-g1-cdE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYe-MK-w8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1896.8" y="133.5832083958021"/>
+            <point key="canvasLocation" x="2226" y="211"/>
         </scene>
         <!--About Us-->
         <scene sceneID="jVN-HH-Ww6">
@@ -114,7 +118,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqz-4X-LZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2718" y="134"/>
+            <point key="canvasLocation" x="3118" y="204"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tN7-cz-Lzc">
@@ -135,4 +139,7 @@
             <point key="canvasLocation" x="280.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8v4-g1-cdE"/>
+    </inferredMetricsTieBreakers>
 </document>

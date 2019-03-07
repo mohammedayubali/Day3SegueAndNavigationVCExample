@@ -19,22 +19,41 @@ class HomeViewController: UIViewController {
         {
             self.lblUserEmail.text = e
         }
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "I am Dyanamic Title"
+        //self.navigationItem.hidesBackButton = true
+        //self.navigationItem.title = "I am Dyanamic Title"
         self.navigationController?.hidesBarsOnTap = true
         //self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+        
+        let vc = self.navigationController?.viewControllers[1] 
+        self.navigationController?.popToViewController(vc!, animated: true)
     }
     
-
-    /*
+    @IBAction func btnNextClick(_ sender: Any)
+    {
+        self.performSegue(withIdentifier: "moveToAboutUsSegue", sender: nil)
+        
+        //self.performSegue(withIdentifier: "moveToLoginSegue", sender: nil)
+        
+        
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "moveToAboutUsSegue"
+        {
+            if let destinationVC = segue.destination as? AboutUsViewController {
+                destinationVC.x = 1_000
+            }
+        }
+        if segue.identifier == "moveToLoginSegue"
+        {
+            
+        }
     }
-    */
+    
 
 }

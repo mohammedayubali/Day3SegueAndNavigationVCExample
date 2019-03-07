@@ -10,10 +10,14 @@ import UIKit
 
 class AboutUsViewController: UIViewController {
 
+    var x:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let i = x
+        {
+            print(i)
+        }
     }
     
 

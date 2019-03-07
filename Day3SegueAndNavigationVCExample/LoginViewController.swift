@@ -32,7 +32,11 @@ class LoginViewController: UIViewController {
         if(email == "a@a.com" && pwd == "123")
         {
             print("Login Success...")
-            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+            homeVC.userEmail = email
+            self.navigationController?.pushViewController(homeVC, animated: true)
+            //self.present(homeVC, animated: true)
             if(swRememberMe.isOn)
             {
                 print("Write Code to remember/store userId/Password")
@@ -41,13 +45,6 @@ class LoginViewController: UIViewController {
             {
                 print("Remove UserId/Password if previously remembered/stored")
             }
-            
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-            homeVC.userEmail = email
-            self.navigationController?.pushViewController(homeVC, animated: true)
-            //self.present(homeVC, animated: true)
-            
         }
         else
         {
