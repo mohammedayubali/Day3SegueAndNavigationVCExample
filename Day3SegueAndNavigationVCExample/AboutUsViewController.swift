@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AboutUsViewController.swift
 //  Day3SegueAndNavigationVCExample
 //
 //  Created by moxDroid on 2019-03-06.
@@ -8,22 +8,12 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class AboutUsViewController: UIViewController {
 
-    var userEmail: String?
-    @IBOutlet weak var lblUserEmail: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let e = userEmail
-        {
-            self.lblUserEmail.text = e
-        }
-        self.navigationItem.hidesBackButton = true
-        self.navigationItem.title = "I am Dyanamic Title"
-        self.navigationController?.hidesBarsOnTap = true
-        //self.navigationController?.navigationBar.isHidden = true
-        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+        // Do any additional setup after loading the view.
     }
     
 

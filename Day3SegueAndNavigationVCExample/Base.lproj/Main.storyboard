@@ -66,20 +66,55 @@
             </objects>
             <point key="canvasLocation" x="1220" y="133.5832083958021"/>
         </scene>
-        <!--Home Title-->
+        <!--Home-->
         <scene sceneID="ElK-rs-GEP">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" title="Home Title" id="Tek-YD-0PX" customClass="HomeViewController" customModule="Day3SegueAndNavigationVCExample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" title="Home" id="Tek-YD-0PX" customClass="HomeViewController" customModule="Day3SegueAndNavigationVCExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WwF-8z-JqX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2TI-Rv-ymX">
+                                <rect key="frame" x="16" y="267" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asG-eo-n1J">
+                                <rect key="frame" x="137" y="401" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="About Us"/>
+                                <connections>
+                                    <segue destination="Ll5-cS-3Ah" kind="show" id="gSD-VU-OzL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Q2U-Ie-5aF"/>
                     </view>
+                    <connections>
+                        <outlet property="lblUserEmail" destination="2TI-Rv-ymX" id="Kv8-R8-Dx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYe-MK-w8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1896.8" y="133.5832083958021"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="jVN-HH-Ww6">
+            <objects>
+                <viewController title="About Us" id="Ll5-cS-3Ah" customClass="AboutUsViewController" customModule="Day3SegueAndNavigationVCExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iph-35-73V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="NAm-Q4-C30"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yqz-4X-LZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2718" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tN7-cz-Lzc">

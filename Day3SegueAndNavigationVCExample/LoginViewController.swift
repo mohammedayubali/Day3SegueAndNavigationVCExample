@@ -16,7 +16,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -44,7 +44,7 @@ class LoginViewController: UIViewController {
             
             let sb = UIStoryboard(name: "Main", bundle: nil)
             let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-            
+            homeVC.userEmail = email
             self.navigationController?.pushViewController(homeVC, animated: true)
             //self.present(homeVC, animated: true)
             

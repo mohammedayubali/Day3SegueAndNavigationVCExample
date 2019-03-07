@@ -13,6 +13,7 @@
 		075C25A922308CAA00C96506 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 075C25A822308CAA00C96506 /* Assets.xcassets */; };
 		075C25AC22308CAA00C96506 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 075C25AA22308CAA00C96506 /* LaunchScreen.storyboard */; };
 		075C25B422308CD900C96506 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C25B322308CD900C96506 /* HomeViewController.swift */; };
+		075C25B622309FDB00C96506 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075C25B522309FDB00C96506 /* AboutUsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		075C25AB22308CAA00C96506 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		075C25AD22308CAA00C96506 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		075C25B322308CD900C96506 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		075C25B522309FDB00C96506 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				075C25AA22308CAA00C96506 /* LaunchScreen.storyboard */,
 				075C25AD22308CAA00C96506 /* Info.plist */,
 				075C25B322308CD900C96506 /* HomeViewController.swift */,
+				075C25B522309FDB00C96506 /* AboutUsViewController.swift */,
 			);
 			path = Day3SegueAndNavigationVCExample;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075C25B622309FDB00C96506 /* AboutUsViewController.swift in Sources */,
 				075C25A422308CA900C96506 /* LoginViewController.swift in Sources */,
 				075C25A222308CA900C96506 /* AppDelegate.swift in Sources */,
 				075C25B422308CD900C96506 /* HomeViewController.swift in Sources */,
