@@ -26,6 +26,34 @@ class LoginViewController: UIViewController {
     
     @IBAction func btnLoginClick(_ sender: Any)
     {
+        let email = txtUserEmail.text
+        let pwd = txtUserPassword.text
+        
+        if(email == "a@a.com" && pwd == "123")
+        {
+            print("Login Success...")
+            
+            if(swRememberMe.isOn)
+            {
+                print("Write Code to remember/store userId/Password")
+            }
+            else
+            {
+                print("Remove UserId/Password if previously remembered/stored")
+            }
+            
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+            
+            self.navigationController?.pushViewController(homeVC, animated: true)
+            //self.present(homeVC, animated: true)
+            
+        }
+        else
+        {
+            //Show Alert Here
+            print("SHOW YOUR Alert Contoller with message User/Password Invalid")
+        }
     }
 }
 
