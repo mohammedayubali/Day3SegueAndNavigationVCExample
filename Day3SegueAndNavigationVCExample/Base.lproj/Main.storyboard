@@ -98,7 +98,6 @@
                     <connections>
                         <outlet property="lblUserEmail" destination="2TI-Rv-ymX" id="Kv8-R8-Dx2"/>
                         <segue destination="Ll5-cS-3Ah" kind="show" identifier="moveToAboutUsSegue" id="Zgi-4d-v7u"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="moveToLoginSegue" id="8v4-g1-cdE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rYe-MK-w8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,7 +138,4 @@
             <point key="canvasLocation" x="280.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="8v4-g1-cdE"/>
-    </inferredMetricsTieBreakers>
 </document>

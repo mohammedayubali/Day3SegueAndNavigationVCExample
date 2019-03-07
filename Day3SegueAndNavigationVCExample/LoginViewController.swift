@@ -17,11 +17,24 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let userDefault = UserDefaults.standard
+        
+        if let email = userDefault.string(forKey: "userEmail")
+        {
+            txtUserEmail.text = email
+            if let pwd = userDefault.string(forKey: "userPassword")
+            {
+                txtUserPassword.text = pwd
+            }
+            
+            swRememberMe.isOn = true
+        }
+        else
+        {
+            swRememberMe.isOn = false
+        }
+    
+        
     }
     
     @IBAction func btnLoginClick(_ sender: Any)
@@ -32,19 +45,28 @@ class LoginViewController: UIViewController {
         if(email == "a@a.com" && pwd == "123")
         {
             print("Login Success...")
-            let sb = UIStoryboard(name: "Main", bundle: nil)
-            let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
-            homeVC.userEmail = email
-            self.navigationController?.pushViewController(homeVC, animated: true)
-            //self.present(homeVC, animated: true)
+            let userDefault = UserDefaults.standard
             if(swRememberMe.isOn)
             {
+                //Store Data to User Default Storage
+                userDefault.set(email, forKey: "userEmail")
+                userDefault.set(pwd, forKey: "userPassword")
+                
                 print("Write Code to remember/store userId/Password")
             }
             else
             {
                 print("Remove UserId/Password if previously remembered/stored")
+                userDefault.removeObject(forKey: "userEmail")
+                userDefault.removeObject(forKey: "userPassword")
             }
+            
+            //Go to NEXT screen
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let homeVC = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+            homeVC.userEmail = email
+            self.navigationController?.pushViewController(homeVC, animated: true)
+            //self.present(homeVC, animated: true)
         }
         else
         {
