@@ -11,6 +11,7 @@ import UIKit
 class AboutUsViewController: UIViewController {
     @IBOutlet weak var lblAnimalName: UILabel!
     
+    @IBOutlet weak var segmentAnimal: UISegmentedControl!
     @IBOutlet weak var imgAnimal: UIImageView!
     var x:Int?
     override func viewDidLoad() {
@@ -20,11 +21,35 @@ class AboutUsViewController: UIViewController {
         {
             print(i)
         }
+        
+        //Add sengment dynamically
+        segmentAnimal.insertSegment(withTitle: "Monkey", at: 3, animated: true)
     }
     
     @IBAction func segmentAnimalChanges(_ sender: UISegmentedControl)
     {
         print(sender.selectedSegmentIndex)
+        
+        switch sender.selectedSegmentIndex {
+        case 0:
+            lblAnimalName.text = "Cat"
+            imgAnimal.image = UIImage(named: "cat")
+            
+        case 1:
+            lblAnimalName.text = "Lion"
+            imgAnimal.image = UIImage(named: "lion")
+            
+        case 2:
+            lblAnimalName.text = "Tiger"
+            imgAnimal.image = UIImage(named: "tiger.png")
+            
+        case 3:
+            lblAnimalName.text = "I am dynamic Monkey"
+            imgAnimal.image = UIImage(named: "monkey")
+            
+        default:
+            print("Invalid Selection")
+        }
     }
     
     /*

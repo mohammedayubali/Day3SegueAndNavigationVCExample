@@ -113,23 +113,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="GSF-0k-o9f">
-                                <rect key="frame" x="16" y="65" width="343" height="29"/>
+                                <rect key="frame" x="16" y="144" width="343" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
-                                    <segment title="Third"/>
+                                    <segment title="Cat"/>
+                                    <segment title="Lion"/>
+                                    <segment title="Tiger"/>
                                 </segments>
                                 <connections>
                                     <action selector="segmentAnimalChanges:" destination="Ll5-cS-3Ah" eventType="valueChanged" id="4ee-uY-MAd"/>
                                 </connections>
                             </segmentedControl>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="05F-GK-cQC">
-                                <rect key="frame" x="16" y="141" width="343" height="236"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cat.png" translatesAutoresizingMaskIntoConstraints="NO" id="05F-GK-cQC">
+                                <rect key="frame" x="16" y="220" width="343" height="236"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Animal Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-Rr-fhi">
-                                <rect key="frame" x="16" y="112" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="I am Cat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1k-Rr-fhi">
+                                <rect key="frame" x="16" y="191" width="343" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -142,6 +142,7 @@
                     <connections>
                         <outlet property="imgAnimal" destination="05F-GK-cQC" id="Yln-nQ-ggg"/>
                         <outlet property="lblAnimalName" destination="E1k-Rr-fhi" id="x8N-8m-Dvp"/>
+                        <outlet property="segmentAnimal" destination="GSF-0k-o9f" id="9wj-u5-1MN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yqz-4X-LZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -167,4 +168,7 @@
             <point key="canvasLocation" x="280.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cat.png" width="400" height="588"/>
+    </resources>
 </document>
