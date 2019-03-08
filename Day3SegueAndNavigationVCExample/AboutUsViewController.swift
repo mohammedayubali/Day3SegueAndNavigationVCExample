@@ -9,7 +9,9 @@
 import UIKit
 
 class AboutUsViewController: UIViewController {
-
+    @IBOutlet weak var lblAnimalName: UILabel!
+    
+    @IBOutlet weak var imgAnimal: UIImageView!
     var x:Int?
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,11 @@ class AboutUsViewController: UIViewController {
         }
     }
     
-
+    @IBAction func segmentAnimalChanges(_ sender: UISegmentedControl)
+    {
+        print(sender.selectedSegmentIndex)
+    }
+    
     /*
     // MARK: - Navigation
 
