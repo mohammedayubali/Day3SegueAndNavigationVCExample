@@ -135,6 +135,35 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="dol-Ed-5d6">
+                                <rect key="frame" x="16" y="93" width="94" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="stapperNumber:" destination="Ll5-cS-3Ah" eventType="valueChanged" id="hnQ-Tk-vSF"/>
+                                </connections>
+                            </stepper>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stepper Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mha-4T-8ox">
+                                <rect key="frame" x="131" y="97" width="108" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="3v4-Kw-irE">
+                                <rect key="frame" x="16" y="55" width="345" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="1" green="0.95260526270000001" blue="0.46078188479999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="maximumTrackTintColor" red="1" green="0.4905167298" blue="0.2162951605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="thumbTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="Ll5-cS-3Ah" eventType="valueChanged" id="Qe5-EE-eEf"/>
+                                </connections>
+                            </slider>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progressViewStyle="bar" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="osL-Hu-qtS">
+                                <rect key="frame" x="18" y="83.5" width="341" height="1.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="trackTintColor" red="1" green="0.26152559819999999" blue="0.18692355250000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="NAm-Q4-C30"/>
@@ -142,6 +171,8 @@
                     <connections>
                         <outlet property="imgAnimal" destination="05F-GK-cQC" id="Yln-nQ-ggg"/>
                         <outlet property="lblAnimalName" destination="E1k-Rr-fhi" id="x8N-8m-Dvp"/>
+                        <outlet property="lblStepperValue" destination="mha-4T-8ox" id="o67-Qa-uGw"/>
+                        <outlet property="progressBar" destination="osL-Hu-qtS" id="aNg-ik-l6a"/>
                         <outlet property="segmentAnimal" destination="GSF-0k-o9f" id="9wj-u5-1MN"/>
                     </connections>
                 </viewController>

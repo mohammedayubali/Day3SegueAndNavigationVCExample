@@ -11,6 +11,8 @@ import UIKit
 class AboutUsViewController: UIViewController {
     @IBOutlet weak var lblAnimalName: UILabel!
     
+    @IBOutlet weak var progressBar: UIProgressView!
+    @IBOutlet weak var lblStepperValue: UILabel!
     @IBOutlet weak var segmentAnimal: UISegmentedControl!
     @IBOutlet weak var imgAnimal: UIImageView!
     var x:Int?
@@ -50,6 +52,16 @@ class AboutUsViewController: UIViewController {
         default:
             print("Invalid Selection")
         }
+    }
+    
+    @IBAction func stapperNumber(_ sender: UIStepper)
+    {
+        lblStepperValue.text = "\(sender.value)"
+    }
+    
+    @IBAction func sliderValueChange(_ sender: UISlider)
+    {
+        progressBar.progress = sender.value / 100.0
     }
     
     /*
